@@ -1,0 +1,27 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "title";
+}
+
+<link href="~/Content/Styles.css" rel="stylesheet" />
+<script src="~/Content/Scripts.js"></script>
+<script src="~/scripts/bootstrap.js"></script>
+<script src="~/scripts/bootstrap.min.js"></script>
+<script src="~/scripts/modernizr-2.6.2.js"></script>
+@using (Html.BeginForm("Result", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{<h2>Choose your way to download text</h2>
+    <form name="myForm">
+        <div>
+            <input type="radio" id="paste" value="text" name="downloadType" required=""/> Paste your text at the area below<br />
+        </div>
+        <div>
+            <textarea name="pastedText" id="textarea" cols="40" rows="5" placeholder="Paste your text here without extra characters"></textarea> <br />
+        </div>
+        <div>
+            <input type="radio" id="download" value="file" name="downloadType" style="float:left" required=""/> Download via file <input type="file" id="browseButton" accept=".txt" name="file"/>
+        </div><br />
+        <input type="submit" />
+        <input type="reset" />
+    </form>
+}

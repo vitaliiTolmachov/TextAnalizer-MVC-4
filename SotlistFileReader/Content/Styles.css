@@ -1,0 +1,7 @@
+﻿body {
+}
+textarea {
+    width: 360px;
+    max-width: 360px;
+    max-height: 150px;
+}

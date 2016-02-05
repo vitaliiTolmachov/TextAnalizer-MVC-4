@@ -1,0 +1,16 @@
+﻿@model IEnumerable<global::SortlistFileReader.Controllers.HomeController.Word>
+
+@{
+    ViewBag.Title = "Result";
+}
+
+<table>
+    @foreach (var word in Model)
+    {
+        <tr>
+            <td>@word.charchter</td>
+            <td>@word.repeat</td>
+        </tr>
+    }
+</table>
+
